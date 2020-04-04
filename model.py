@@ -113,31 +113,31 @@ print(accuracy_score(y1test,y_pred_logreg))
 pickle.dump(logreg, open('logreg_model.pkl','wb'))
 
 
-dl_model = Sequential()
-node = 512
-dl_model.add(Dense(node,input_dim=16454,activation='relu'))
-dl_model.add(Dropout(0.5))
-dl_model.add(Dense(node,input_dim=node,activation='relu'))
-dl_model.add(Dropout(0.5))
-dl_model.add(Dense(node,input_dim=node,activation='relu'))
-dl_model.add(Dropout(0.5))
-dl_model.add(Dense(node,input_dim=node,activation='relu'))
-dl_model.add(Dropout(0.5))
-dl_model.add(Dense(node,input_dim=node,activation='relu'))
-dl_model.add(Dropout(0.5))
-dl_model.add(Dense(2, activation='softmax'))
-dl_model.compile(loss='sparse_categorical_crossentropy',
-                  optimizer='adam',
-                  metrics=['accuracy'])
-np.random.seed(5)
+#dl_model = Sequential()
+#node = 512
+#dl_model.add(Dense(node,input_dim=16454,activation='relu'))
+#dl_model.add(Dropout(0.5))
+#dl_model.add(Dense(node,input_dim=node,activation='relu'))
+#dl_model.add(Dropout(0.5))
+#dl_model.add(Dense(node,input_dim=node,activation='relu'))
+#dl_model.add(Dropout(0.5))
+#dl_model.add(Dense(node,input_dim=node,activation='relu'))
+#dl_model.add(Dropout(0.5))
+#dl_model.add(Dense(node,input_dim=node,activation='relu'))
+#dl_model.add(Dropout(0.5))
+#dl_model.add(Dense(2, activation='softmax'))
+#dl_model.compile(loss='sparse_categorical_crossentropy',
+#                  optimizer='adam',
+#                  metrics=['accuracy'])
+#np.random.seed(5)
 
-dl_model.fit(X1train, y1train, 
-          validation_data=(X1test, y1test),
-          epochs = 30,
-          batch_size = 180)
+#dl_model.fit(X1train, y1train, 
+#          validation_data=(X1test, y1test),
+#          epochs = 30,
+#          batch_size = 180)
 
-score = dl_model.evaluate(X1test, y1test, verbose=0)
-print('Test loss:', score[0])
-print('Test accuracy:', score[1])
+#score = dl_model.evaluate(X1test, y1test, verbose=0)
+#print('Test loss:', score[0])
+#print('Test accuracy:', score[1])
 
-pickle.dump(dl_model, open('dl_model.pkl','wb'))
+#pickle.dump(dl_model, open('dl_model.pkl','wb'))
