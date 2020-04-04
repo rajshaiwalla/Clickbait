@@ -20,10 +20,6 @@ from sklearn.model_selection import train_test_split as tts
 from sklearn.metrics import classification_report,accuracy_score,confusion_matrix
 from sklearn.model_selection import GridSearchCV
 
-from keras.wrappers.scikit_learn import KerasClassifier
-from tensorflow.python.keras.layers import  Dropout, Dense
-from tensorflow.python.keras.models import Sequential
-
 from flask import Flask,render_template,url_for,request
 
 #from numpy.core.umath_tests import inner1d
