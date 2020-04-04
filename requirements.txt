@@ -19,10 +19,7 @@ jedi==0.16.0
 Jinja2==2.11.1
 jupyter-client==6.1.2
 jupyter-core==4.6.3
-mkl-fft==1.0.6
-mkl-random==1.0.1
 nltk==3.4.5
-normalise==0.1.8
 numpy==1.15.4
 pandas==1.0.3
 scikit-learn==0.19.1
