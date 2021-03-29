@@ -15,7 +15,7 @@ jupyter-core==4.6.3
 nltk==3.4.5
 numpy==1.15.4
 pandas==1.0.3
-Pygments==2.6.1
+Pygments==2.7.4
 scikit-learn==0.19.1
 scipy==1.1.0
 virtualenv==13.1.0
